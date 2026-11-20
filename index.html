@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Push2Prod Technologies | Science, Tech, Talent, Digital</title>
+<meta name="description" content="Push2Prod Technologies Private Limited: one company, four divisions. Science coaching, IT training, recruitment and digital technology solutions.">
+<meta name="theme-color" content="#0F1B2D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF2F6;
+  --white:#FFFFFF;
+  --ink:#0F1B2D;
+  --ink-2:#44546A;
+  --line:#D5DDE7;
+  --science:#E8A317;
+  --tech:#2B59FF;
+  --talent:#D6336C;
+  --digital:#0FA37F;
+  --radius:14px;
+  --max:1180px;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tech);outline-offset:3px;border-radius:4px}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(238,242,246,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.02em;display:flex;align-items:center;gap:.5rem}
+.brand b{color:var(--tech);font-weight:800}
+.brand i{width:26px;height:26px;border-radius:7px;background:var(--ink);display:grid;place-items:center;color:#fff;font-style:normal;font-family:var(--mono);font-size:.8rem}
+nav ul{display:flex;gap:2rem;list-style:none;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink-2)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:#fff!important;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:600 .95rem var(--body);transition:transform .15s,background .15s}
+.btn:hover{background:var(--tech);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:1.5px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff!important}
+.menu-btn{display:none;background:none;border:1.5px solid var(--ink);border-radius:8px;padding:.4rem .7rem;font:600 .9rem var(--body);cursor:pointer}
+
+/* HERO */
+.hero{padding:clamp(56px,9vw,110px) 0 70px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,7vw,5.6rem);line-height:.98;letter-spacing:-.035em;max-width:14ch}
+.hero p.lead{margin-top:1.6rem;max-width:56ch;font-size:1.2rem;color:var(--ink-2)}
+.hero .cta{margin-top:2.2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+
+/* PIPELINE (signature element) */
+.pipe{margin-top:clamp(50px,7vw,90px);background:var(--ink);color:#fff;border-radius:22px;padding:clamp(24px,4vw,44px);position:relative;overflow:hidden}
+.pipe-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.82rem;color:#9FB0C8;margin-bottom:2rem}
+.pipe-head .live{color:#5CF0C0}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.stages::before{content:"";position:absolute;left:12.5%;right:12.5%;top:22px;height:3px;background:#2A3A52;border-radius:3px}
+.stages::after{content:"";position:absolute;left:12.5%;top:22px;height:3px;width:0;border-radius:3px;background:linear-gradient(90deg,var(--science),var(--tech),var(--talent),var(--digital));animation:run 3.2s .6s cubic-bezier(.6,.1,.2,1) forwards}
+@keyframes run{to{width:75%}}
+.stage{text-align:center;position:relative;z-index:1;padding:0 .5rem}
+.dot{width:46px;height:46px;border-radius:50%;margin:0 auto 1rem;display:grid;place-items:center;background:#1B2A42;border:3px solid #2A3A52;font-family:var(--mono);font-size:.85rem;color:#9FB0C8;animation:lit .5s forwards}
+.stage:nth-child(1) .dot{--c:var(--science);animation-delay:.7s}
+.stage:nth-child(2) .dot{--c:var(--tech);animation-delay:1.5s}
+.stage:nth-child(3) .dot{--c:var(--talent);animation-delay:2.3s}
+.stage:nth-child(4) .dot{--c:var(--digital);animation-delay:3.1s}
+@keyframes lit{to{background:var(--c);border-color:var(--c);color:#fff;box-shadow:0 0 0 7px color-mix(in srgb,var(--c) 28%,transparent)}}
+.stage h3{font-family:var(--display);font-size:1.7rem;letter-spacing:-.02em}
+.stage span{font-size:.9rem;color:#9FB0C8;display:block;margin-top:.15rem}
+.pipe-foot{margin-top:2rem;font-family:var(--mono);font-size:.82rem;color:#9FB0C8;border-top:1px solid #2A3A52;padding-top:1rem}
+.pipe-foot b{color:#5CF0C0;font-weight:500}
+
+/* SECTIONS */
+section{padding:clamp(60px,8vw,110px) 0}
+.sec-title{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.3rem);letter-spacing:-.03em;line-height:1.05;max-width:20ch}
+.sec-sub{margin-top:1rem;color:var(--ink-2);max-width:58ch;font-size:1.1rem}
+
+/* DIVISIONS */
+.divs{margin-top:3rem;display:grid;gap:1.2rem}
+.div{display:grid;grid-template-columns:230px 1fr;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .2s,transform .2s}
+.div:hover{box-shadow:0 18px 40px -22px rgba(15,27,45,.45);transform:translateY(-2px)}
+.div .side{background:var(--c);color:#fff;padding:1.8rem;display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.div .side small{font-family:var(--mono);font-size:.85rem;opacity:.9}
+.div .side h3{font-family:var(--display);font-size:2.3rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.div .main{padding:1.8rem 2rem}
+.div .main h4{font-family:var(--display);font-size:1.45rem;letter-spacing:-.015em;line-height:1.25}
+.div .main p{color:var(--ink-2);margin-top:.5rem;max-width:60ch}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem;list-style:none}
+.chips li{border:1.5px solid color-mix(in srgb,var(--c) 55%,white);background:color-mix(in srgb,var(--c) 9%,white);padding:.3rem .8rem;border-radius:999px;font-size:.88rem;font-weight:500}
+.div.science{--c:#C98A00}.div.tech{--c:var(--tech)}.div.talent{--c:var(--talent)}.div.digital{--c:#0B8A6A}
+.div .more{display:inline-block;margin-top:1.3rem;font-weight:600;color:var(--c);text-decoration:none;border-bottom:2px solid currentColor}
+
+/* WHY */
+.why{background:var(--ink);color:#fff;border-radius:28px;margin-inline:20px}
+.why .sec-sub{color:#B8C5D8}
+.why-grid{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.why-grid h4{font-family:var(--display);font-size:1.35rem;margin-bottom:.5rem}
+.why-grid p{color:#B8C5D8}
+.why-grid div{border-top:3px solid var(--c);padding-top:1.1rem}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.info{margin-top:2rem;display:grid;gap:1rem}
+.info p{color:var(--ink-2)}
+.info strong{display:block;color:var(--ink)}
+form{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,34px);display:grid;gap:1rem}
+label{font-weight:600;font-size:.92rem;display:grid;gap:.35rem}
+input,select,textarea{font:400 1rem var(--body);padding:.8rem .9rem;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--tech);background:#fff}
+textarea{min-height:120px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.note{font-size:.85rem;color:var(--ink-2)}
+
+footer{border-top:1px solid var(--line);padding:2.5rem 0;margin-top:40px}
+.foot{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center;color:var(--ink-2);font-size:.92rem}
+.foot .tag{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.05rem}
+
+/* RESPONSIVE */
+@media (max-width:860px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:1.1rem;padding:1.4rem 20px 1.8rem;border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  .div{grid-template-columns:1fr}
+  .div .side{flex-direction:row;align-items:flex-end}
+  .why-grid,.contact{grid-template-columns:1fr}
+  .stages{grid-template-columns:1fr;gap:1.8rem;text-align:left}
+  .stages::before,.stages::after{display:none}
+  .stage{display:flex;gap:1rem;align-items:center;text-align:left;padding:0}
+  .dot{margin:0}
+  .dot{animation-duration:.01s}
+  .row{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}
+  .stages::after{width:75%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Push2Prod Technologies home"><i>&gt;_</i>Push<b>2</b>Prod</a>
+    <nav aria-label="Main">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu">
+        <li><a href="#divisions">Divisions</a></li>
+        <li><a href="#why">Why Push2Prod</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>From classroom to production.</h1>
+    <p class="lead">Push2Prod Technologies is one company with four divisions. We coach science students, train IT professionals, hire talent for businesses and deliver cloud and DevOps projects.</p>
+    <div class="cta">
+      <a class="btn" href="#divisions">Explore our divisions</a>
+      <a class="btn ghost" href="#contact">Talk to us</a>
+    </div>
+
+    <div class="pipe" role="img" aria-label="Pipeline showing four stages: Learn is Science, Build is Tech, Connect is Talent, Deliver is Digital">
+      <div class="pipe-head"><span>pipeline: push2prod / main</span><span class="live">&#9679; all stages healthy</span></div>
+      <div class="stages">
+        <div class="stage"><div class="dot">1</div><div><h3>Learn</h3><span>Science</span></div></div>
+        <div class="stage"><div class="dot">2</div><div><h3>Build</h3><span>Tech</span></div></div>
+        <div class="stage"><div class="dot">3</div><div><h3>Connect</h3><span>Talent</span></div></div>
+        <div class="stage"><div class="dot">4</div><div><h3>Deliver</h3><span>Digital</span></div></div>
+      </div>
+      <div class="pipe-foot">status: <b>deployed</b> &nbsp;|&nbsp; Learn. Build. Connect. Deliver.</div>
+    </div>
+  </div>
+
+  <section id="divisions">
+    <div class="wrap">
+      <h2 class="sec-title">Four divisions, one pipeline</h2>
+      <p class="sec-sub">A student learns in Science, builds skills in Tech, gets placed through Talent, and the same expertise delivers projects for clients in Digital.</p>
+
+      <div class="divs">
+        <article class="div science">
+          <div class="side"><small>Learn</small><h3>Science</h3></div>
+          <div class="main">
+            <h4>Education and academic coaching</h4>
+            <p>Focused coaching for students who want strong concepts and exam results, from board-level science to competitive entrance tests.</p>
+            <ul class="chips"><li>11th Science</li><li>12th Science</li><li>MHT-CET</li><li>JEE</li></ul>
+            <a class="more" href="#contact">Ask about admissions</a>
+          </div>
+        </article>
+
+        <article class="div tech">
+          <div class="side"><small>Build</small><h3>Tech</h3></div>
+          <div class="main">
+            <h4>IT training and skill development</h4>
+            <p>Hands-on training in the tools companies use every day, so learners can move from theory to real infrastructure work.</p>
+            <ul class="chips"><li>Linux</li><li>AWS</li><li>DevOps</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li></ul>
+            <a class="more" href="#contact">Ask about courses</a>
+          </div>
+        </article>
+
+        <article class="div talent">
+          <div class="side"><small>Connect</small><h3>Talent</h3></div>
+          <div class="main">
+            <h4>Recruitment and manpower solutions</h4>
+            <p>We connect employers with the right people, for technical and non-technical roles, on permanent or staffing terms.</p>
+            <ul class="chips"><li>IT hiring</li><li>Non-IT hiring</li><li>Staffing</li><li>Recruitment</li></ul>
+            <a class="more" href="#contact">Hire with us</a>
+          </div>
+        </article>
+
+        <article class="div digital">
+          <div class="side"><small>Deliver</small><h3>Digital</h3></div>
+          <div class="main">
+            <h4>IT projects and digital technology solutions</h4>
+            <p>We design, build and run technology projects for businesses, with a focus on reliable cloud setups and automated delivery.</p>
+            <ul class="chips"><li>Cloud</li><li>Infrastructure</li><li>DevOps</li><li>IT consulting</li><li>Automation</li></ul>
+            <a class="more" href="#contact">Start a project</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="wrap">
+      <h2 class="sec-title">Why the name Push2Prod?</h2>
+      <p class="sec-sub">In IT, pushing to production means your work is live and real. That is the standard we hold for students, clients and candidates.</p>
+      <div class="why-grid">
+        <div style="--c:var(--science)"><h4>Learning that ships</h4><p>Every course, from JEE prep to Kubernetes, is built around outcomes you can measure.</p></div>
+        <div style="--c:var(--talent)"><h4>People and tech together</h4><p>Training, hiring and delivery under one roof means we understand both the skills and the jobs.</p></div>
+        <div style="--c:var(--digital)"><h4>Practical, not theoretical</h4><p>Our trainers and engineers work with the same cloud and DevOps tools they teach and deploy.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2 class="sec-title">Let's start the conversation</h2>
+        <p class="sec-sub">Tell us which division you are interested in and we will get back to you.</p>
+        <div class="info">
+          <p><strong>Email</strong>info@push2prod.com</p>
+          <p><strong>Phone</strong>+91 00000 00000</p>
+          <p><strong>Address</strong>Your office address, City, Maharashtra, India</p>
+        </div>
+      </div>
+
+      <form id="form" novalidate>
+        <div class="row">
+          <label>Full name<input name="name" required autocomplete="name"></label>
+          <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        </div>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>I am interested in
+          <select name="division">
+            <option>Science: coaching (11th, 12th, MHT-CET, JEE)</option>
+            <option>Tech: IT training</option>
+            <option>Talent: hiring or job search</option>
+            <option>Digital: IT project or consulting</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" required></textarea></label>
+        <button class="btn" type="submit">Send enquiry</button>
+        <p class="note" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="tag">Learn. Build. Connect. Deliver.</span>
+    <span>&copy; <span id="yr"></span> Push2Prod Technologies Private Limited</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const btn = document.getElementById('menuBtn'), menu = document.getElementById('menu');
+btn.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+});
+menu.addEventListener('click', e => { if (e.target.tagName === 'A') { menu.classList.remove('open'); btn.setAttribute('aria-expanded', false); } });
+
+/* Contact form: opens the visitor's email app. Replace with your backend or a form service (Formspree, etc.) when ready. */
+document.getElementById('form').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = e.target, s = document.getElementById('status');
+  if (!f.checkValidity()) { s.textContent = 'Please fill in your name, phone, email and message.'; f.reportValidity(); return; }
+  const d = new FormData(f);
+  const body = `Name: ${d.get('name')}\nPhone: ${d.get('phone')}\nEmail: ${d.get('email')}\nInterest: ${d.get('division')}\n\n${d.get('message')}`;
+  window.location.href = `mailto:info@push2prod.com?subject=${encodeURIComponent('Website enquiry: ' + d.get('division'))}&body=${encodeURIComponent(body)}`;
+  s.textContent = 'Opening your email app to send the enquiry.';
+});
+</script>
+</body>
+</html>
